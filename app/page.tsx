@@ -54,8 +54,8 @@ export default function ProSovereignHull() {
         <h2 style={{ fontSize: '2rem', fontWeight: '900', marginBottom: '60px', textAlign: 'center', letterSpacing: '2px' }}>THE NON-NEGOTIABLE LOGIC</h2>
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
-          {/* MASTER EQUATION BOX (CENTERED OR SIDE) */}
-          <div style={{ gridColumn: 'span 1', padding: '40px', border: '1px solid #111', borderRadius: '20px', background: '#050505' }}>
+          {/* MASTER EQUATION BOX */}
+          <div style={{ padding: '40px', border: '1px solid #111', borderRadius: '20px', background: '#050505' }}>
              <h3 style={{ color: '#3b82f6', fontSize: '1rem', marginBottom: '30px' }}>THE MASTER EQUATION</h3>
              <div style={{ textAlign: 'center', margin: '40px 0' }}>
                 <h2 style={{ fontSize: '2.5rem', fontWeight: '300' }}>ΔS<sub>system</sub> ≤ 0</h2>
@@ -67,7 +67,7 @@ export default function ProSovereignHull() {
           </div>
 
           {/* THE THREE AXIOM CARDS */}
-          <div style={{ gridColumn: 'span 2', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', gridColumn: 'span 2' }}>
             {LogicCards.map((card, i) => (
               <div key={i} style={{ padding: '30px', border: `1px solid ${card.color}33`, borderRadius: '20px', background: '#080808' }}>
                 <h4 style={{ color: card.color, fontSize: '0.9rem', fontWeight: 'bold' }}>{card.title}</h4>
@@ -79,8 +79,8 @@ export default function ProSovereignHull() {
         </div>
       </section>
 
-      {/* UTILITY INTEGRAL BAR */}
-      <section style={{ padding: '60px 20px', background: 'linear-gradient(90deg, #000, #050505, #000)', borderY: '1px solid #111', textAlign: 'center' }}>
+      {/* UTILITY INTEGRAL BAR - FIXED BORDERY ERROR */}
+      <section style={{ padding: '60px 20px', background: 'linear-gradient(90deg, #000, #050505, #000)', borderTop: '1px solid #111', borderBottom: '1px solid #111', textAlign: 'center' }}>
         <h2 style={{ color: '#10b981', fontSize: '1.5rem', fontWeight: '200', letterSpacing: '2px' }}>
           Maximize U(Reality) = ∫ [L - F + H] dV dt
         </h2>
