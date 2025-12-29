@@ -1,59 +1,96 @@
 import React from 'react';
 
-const missions = [
-  { id: "01", n: "IDRIS AI", r: "THE MIND", vid: "/logos/idris_ai.mp4", desc: "Sovereign Augmented Intelligence governing the Kottayil Triad." },
-  { id: "02", n: "CHIDĀKĀSHA", r: "THE MEMORY", vid: "/logos/chidakasha.mp4", desc: "The Universal Deep-Space Research Library for civilizational continuity." },
-  { id: "03", n: "UCA", r: "THE IMPACT", vid: "/logos/uca_shield.mp4", desc: "Ultra Cold Atom: Scavenging terrestrial entropy to power the future." },
-  { id: "04", n: "PARTSEUPHORIA", r: "MANUFACTURING", vid: "/logos/parts_euphoria.mp4", desc: "The core skeleton of orbital and terrestrial thermal hardware." },
-  { id: "05", n: "J GARAGE", r: "THE FIRE", vid: "/logos/jgarage.mp4", desc: "High-stress validation and the forge of 1,000 R&D cycles." },
-  { id: "06", n: "HR TRADERS", r: "THE METABOLISM", vid: "/logos/hr_traders.mp4", desc: "Global logistics and the circular revenue engine of the MPC." }
+const LogicCards = [
+  { 
+    title: "LOVE (L): Cohesion & Integrity", 
+    subtitle: "Quantity 0 (Proof Erasure)", 
+    desc: "The non-negotiable adherence to structural invariants (e.g., Hull Seal). Enforces safety proofs with zero runtime overhead. This is rigorous methodology encoded into the system architecture.",
+    color: "#3b82f6"
+  },
+  { 
+    title: "FEAR (F): Entropy & Constraint", 
+    subtitle: "Quantity 1 (Linear Resource)", 
+    desc: "Enforces perfect resource conservation. Every Joule and every liter must be accounted for and consumed exactly once. Prevents resource collapse through cryptographic tracking.",
+    color: "#ef4444"
+  },
+  { 
+    title: "HOPE (H): Potential & Vector", 
+    subtitle: "Quantity ω (Unrestricted)", 
+    desc: "The engine of growth, R&D, and predictive modeling. Utilizes unlimited telemetry to define the optimal path toward future states. The expansion vector to the cosmos.",
+    color: "#10b981"
+  }
 ];
 
-export default function SpaceXHull() {
+export default function ProSovereignHull() {
   return (
-    <div style={{ backgroundColor: 'black', color: 'white', fontFamily: 'sans-serif', scrollSnapType: 'y mandatory', overflowY: 'scroll', height: '100vh' }}>
+    <div style={{ backgroundColor: '#000', color: '#fff', minHeight: '100vh', fontFamily: 'sans-serif', overflowX: 'hidden' }}>
       
-      {/* SECTION 1: THE APEX HERO */}
-      <section style={{ height: '100vh', position: 'relative', scrollSnapAlign: 'start', display: 'flex', alignItems: 'flex-end', padding: '60px' }}>
-        <video autoPlay muted loop playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 0.6 }}>
+      {/* HEADER NAVIGATION */}
+      <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 40px', borderBottom: '1px solid #111', position: 'fixed', width: '100%', top: 0, zIndex: 100, backgroundColor: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(10px)' }}>
+        <div>
+          <h1 style={{ fontSize: '1.2rem', fontWeight: '900', margin: 0, letterSpacing: '1px' }}>
+            CARBON<span style={{ color: '#3b82f6' }}>TO</span>COSMOS
+          </h1>
+          <small style={{ fontSize: '0.6rem', color: '#555', letterSpacing: '2px' }}>SPACE AND DEFENCE</small>
+        </div>
+        <div style={{ display: 'flex', gap: '20px', fontSize: '0.7rem', fontWeight: 'bold', color: '#888', letterSpacing: '1px' }}>
+          <span>00. BEACON</span><span>01. CORE</span><span>02. HERITAGE</span><span>03. PRODUCTS</span>
+        </div>
+      </nav>
+
+      {/* HERO SECTION */}
+      <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', position: 'relative' }}>
+        <video autoPlay muted loop playsInline style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', opacity: 0.4 }}>
           <source src="/logos/mpc_main_anim.mp4" type="video/mp4" />
         </video>
-        <div style={{ zIndex: 10, maxWidth: '800px' }}>
-          <h2 style={{ fontSize: '1rem', fontWeight: '300', letterSpacing: '8px', marginBottom: '10px' }}>UPCOMING MISSION</h2>
-          <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', fontWeight: '900', margin: 0, lineHeight: '1' }}>CARBON TO COSMOS</h1>
-          <h3 style={{ fontSize: '1.2rem', fontWeight: '400', color: '#3b82f6', letterSpacing: '4px', marginTop: '10px' }}>SPACE AND DEFENCE</h3>
-          <div style={{ marginTop: '40px', display: 'flex', gap: '20px' }}>
-            <a href="https://doi.org/10.5281/zenodo.18072201" target="_blank" rel="noreferrer" style={{ padding: '12px 35px', border: '2px solid white', textDecoration: 'none', color: 'white', fontWeight: 'bold', fontSize: '0.7rem', letterSpacing: '2px' }}>VIEW SCIENTIFIC RECORD</a>
+        <div style={{ zIndex: 10 }}>
+          <h1 style={{ fontSize: 'clamp(3rem, 12vw, 6rem)', fontWeight: 900, letterSpacing: '-5px', margin: 0 }}>KOTTAYIL-COSMOS</h1>
+          <p style={{ color: '#3b82f6', letterSpacing: '8px', marginTop: '10px' }}>IDRIS AUGMENTED INTELLIGENCE</p>
+        </div>
+      </section>
+
+      {/* LOGIC DECK SECTION */}
+      <section style={{ padding: '100px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: '2rem', fontWeight: '900', marginBottom: '60px', textAlign: 'center', letterSpacing: '2px' }}>THE NON-NEGOTIABLE LOGIC</h2>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
+          {/* MASTER EQUATION BOX (CENTERED OR SIDE) */}
+          <div style={{ gridColumn: 'span 1', padding: '40px', border: '1px solid #111', borderRadius: '20px', background: '#050505' }}>
+             <h3 style={{ color: '#3b82f6', fontSize: '1rem', marginBottom: '30px' }}>THE MASTER EQUATION</h3>
+             <div style={{ textAlign: 'center', margin: '40px 0' }}>
+                <h2 style={{ fontSize: '2.5rem', fontWeight: '300' }}>ΔS<sub>system</sub> ≤ 0</h2>
+                <p style={{ color: '#444', fontSize: '0.8rem' }}>(Entropy must be controlled or reversed)</p>
+                <div style={{ height: '40px' }}></div>
+                <h2 style={{ fontSize: '1.8rem', fontWeight: '300' }}>Q<sub>managed</sub> = η · (T<sub>ext</sub> - T<sub>tar</sub>)</h2>
+                <p style={{ color: '#444', fontSize: '0.8rem', marginTop: '10px' }}>Verified thermal efficiency coefficient derived from 10,000+ field hours.</p>
+             </div>
+          </div>
+
+          {/* THE THREE AXIOM CARDS */}
+          <div style={{ gridColumn: 'span 2', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+            {LogicCards.map((card, i) => (
+              <div key={i} style={{ padding: '30px', border: `1px solid ${card.color}33`, borderRadius: '20px', background: '#080808' }}>
+                <h4 style={{ color: card.color, fontSize: '0.9rem', fontWeight: 'bold' }}>{card.title}</h4>
+                <h2 style={{ fontSize: '1.8rem', margin: '10px 0', fontWeight: '300' }}>{card.subtitle}</h2>
+                <p style={{ color: '#666', fontSize: '0.9rem', lineHeight: '1.6' }}>{card.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 2: THE IDENTITY THEOREM */}
-      <section style={{ height: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', background: '#050505', scrollSnapAlign: 'start', borderTop: '1px solid #111', borderBottom: '1px solid #111' }}>
-        <p style={{ color: '#444', letterSpacing: '10px', marginBottom: '20px', fontSize: '0.6rem' }}>CORE ARCHITECTURE</p>
-        <h2 style={{ fontSize: 'clamp(1.2rem, 5vw, 2.5rem)', fontWeight: '200', letterSpacing: '5px' }}>REALITY = INFO + SPACE + TIME</h2>
-        <div style={{ width: '60px', height: '2px', background: '#3b82f6', marginTop: '40px' }}></div>
+      {/* UTILITY INTEGRAL BAR */}
+      <section style={{ padding: '60px 20px', background: 'linear-gradient(90deg, #000, #050505, #000)', borderY: '1px solid #111', textAlign: 'center' }}>
+        <h2 style={{ color: '#10b981', fontSize: '1.5rem', fontWeight: '200', letterSpacing: '2px' }}>
+          Maximize U(Reality) = ∫ [L - F + H] dV dt
+        </h2>
+        <p style={{ color: '#333', fontSize: '0.7rem', marginTop: '10px', fontStyle: 'italic' }}>
+          The Objective Function: Structural integrity minus entropy plus expansion potential, integrated across all spacetime.
+        </p>
       </section>
 
-      {/* SECTION 3: THE MISSION GRID */}
-      {missions.map((m, i) => (
-        <section key={i} style={{ height: '100vh', position: 'relative', scrollSnapAlign: 'start', display: 'flex', alignItems: 'center', padding: '60px' }}>
-          <video autoPlay muted loop playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.4, zIndex: 0 }}>
-            <source src={m.vid} type="video/mp4" />
-          </video>
-          <div style={{ zIndex: 10, maxWidth: '500px' }}>
-            <h4 style={{ color: '#3b82f6', letterSpacing: '5px', fontSize: '0.7rem', fontWeight: 'bold' }}>{m.r}</h4>
-            <h2 style={{ fontSize: '3.5rem', fontWeight: '900', margin: '10px 0' }}>{m.n}</h2>
-            <p style={{ color: '#ccc', fontSize: '1rem', lineHeight: '1.6' }}>{m.desc}</p>
-            <button style={{ marginTop: '30px', padding: '10px 30px', border: '2px solid white', background: 'transparent', color: 'white', fontWeight: 'bold', letterSpacing: '2px', cursor: 'pointer', fontSize: '0.7rem' }}>LEARN MORE</button>
-          </div>
-        </section>
-      ))}
-
-      {/* FOOTER */}
-      <footer style={{ padding: '80px 20px', textAlign: 'center', background: 'black', color: '#222', scrollSnapAlign: 'end' }}>
-        <p style={{ letterSpacing: '15px', fontSize: '0.7rem', marginBottom: '20px' }}>86,400 SECONDS // NO TIME TO WASTE</p>
-        <p style={{ fontSize: '0.6rem' }}>© 2025 MULTI-PLANETARY CIVILISATION RESEARCH LAB</p>
+      <footer style={{ padding: '100px 20px', textAlign: 'center', color: '#222' }}>
+        <p style={{ letterSpacing: '10px', fontSize: '0.7rem' }}>86,400 SECONDS // NO TIME TO WASTE</p>
       </footer>
     </div>
   );
