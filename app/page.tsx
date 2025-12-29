@@ -25,8 +25,8 @@ export default function SpaceAndDefenceHull() {
   return (
     <div style={{ backgroundColor: '#000', color: '#fff', minHeight: '100vh', fontFamily: 'sans-serif', overflowX: 'hidden' }}>
       
-      {/* HEADER NAVIGATION */}
-      <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 40px', borderBottom: '1px solid #111', position: 'fixed', width: '100%', top: 0, z_index: 100, backgroundColor: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(10px)' }}>
+      {/* HEADER NAVIGATION - FIXED ZINDEX */}
+      <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 40px', borderBottom: '1px solid #111', position: 'fixed', width: '100%', top: 0, zIndex: 100, backgroundColor: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(10px)' }}>
         <div>
           <h1 style={{ fontSize: '1.2rem', fontWeight: '900', margin: 0, letterSpacing: '1px' }}>
             CARBON<span style={{ color: '#3b82f6' }}>TO</span>COSMOS
@@ -38,7 +38,7 @@ export default function SpaceAndDefenceHull() {
         </div>
       </nav>
 
-      {/* HERO SECTION - REALIGNED HEADING */}
+      {/* HERO SECTION */}
       <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', position: 'relative' }}>
         <video autoPlay muted loop playsInline style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', opacity: 0.4 }}>
           <source src="/logos/mpc_main_anim.mp4" type="video/mp4" />
