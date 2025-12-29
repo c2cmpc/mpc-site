@@ -21,12 +21,12 @@ const LogicCards = [
   }
 ];
 
-export default function ProSovereignHull() {
+export default function SpaceAndDefenceHull() {
   return (
     <div style={{ backgroundColor: '#000', color: '#fff', minHeight: '100vh', fontFamily: 'sans-serif', overflowX: 'hidden' }}>
       
       {/* HEADER NAVIGATION */}
-      <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 40px', borderBottom: '1px solid #111', position: 'fixed', width: '100%', top: 0, zIndex: 100, backgroundColor: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(10px)' }}>
+      <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 40px', borderBottom: '1px solid #111', position: 'fixed', width: '100%', top: 0, z_index: 100, backgroundColor: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(10px)' }}>
         <div>
           <h1 style={{ fontSize: '1.2rem', fontWeight: '900', margin: 0, letterSpacing: '1px' }}>
             CARBON<span style={{ color: '#3b82f6' }}>TO</span>COSMOS
@@ -38,15 +38,30 @@ export default function ProSovereignHull() {
         </div>
       </nav>
 
-      {/* HERO SECTION */}
+      {/* HERO SECTION - REALIGNED HEADING */}
       <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', position: 'relative' }}>
         <video autoPlay muted loop playsInline style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', opacity: 0.4 }}>
           <source src="/logos/mpc_main_anim.mp4" type="video/mp4" />
         </video>
-        <div style={{ zIndex: 10 }}>
-          <h1 style={{ fontSize: 'clamp(3rem, 12vw, 6rem)', fontWeight: 900, letterSpacing: '-5px', margin: 0 }}>KOTTAYIL-COSMOS</h1>
-          <p style={{ color: '#3b82f6', letterSpacing: '8px', marginTop: '10px' }}>IDRIS AUGMENTED INTELLIGENCE</p>
+        <div style={{ zIndex: 10, padding: '0 20px' }}>
+          <h1 style={{ fontSize: 'clamp(2.5rem, 10vw, 5.5rem)', fontWeight: 900, letterSpacing: '-4px', margin: 0, lineHeight: '1', textTransform: 'uppercase' }}>
+            CARBON TO COSMOS
+          </h1>
+          <h2 style={{ fontSize: 'clamp(1.5rem, 6vw, 3.5rem)', fontWeight: 400, color: '#3b82f6', letterSpacing: '6px', marginTop: '10px', textTransform: 'uppercase' }}>
+            SPACE AND DEFENCE
+          </h2>
+          <p style={{ color: '#aaa', fontSize: '1rem', marginTop: '30px', letterSpacing: '4px', fontWeight: 300 }}>
+            MULTI-PLANETARY CIVILISATION // IDRIS AUGMENTED INTELLIGENCE
+          </p>
         </div>
+      </section>
+
+      {/* THE IDENTITY THEOREM */}
+      <section style={{ padding: '100px 20px', background: 'linear-gradient(to bottom, #000, #050505)', borderTop: '1px solid #111', borderBottom: '1px solid #111', textAlign: 'center' }}>
+        <p style={{ color: '#444', fontSize: '0.8rem', letterSpacing: '0.6em', marginBottom: '30px' }}>THE FUNDAMENTAL IDENTITY</p>
+        <h2 style={{ color: '#fbbf24', fontSize: 'clamp(1.2rem, 6vw, 2.5rem)', fontWeight: 200, letterSpacing: '4px' }}>
+          REALITY = INFORMATION (L) + SPACE (H) + TIME (F)
+        </h2>
       </section>
 
       {/* LOGIC DECK SECTION */}
@@ -79,18 +94,16 @@ export default function ProSovereignHull() {
         </div>
       </section>
 
-      {/* UTILITY INTEGRAL BAR - FIXED BORDERY ERROR */}
+      {/* UTILITY INTEGRAL BAR */}
       <section style={{ padding: '60px 20px', background: 'linear-gradient(90deg, #000, #050505, #000)', borderTop: '1px solid #111', borderBottom: '1px solid #111', textAlign: 'center' }}>
         <h2 style={{ color: '#10b981', fontSize: '1.5rem', fontWeight: '200', letterSpacing: '2px' }}>
           Maximize U(Reality) = ∫ [L - F + H] dV dt
         </h2>
-        <p style={{ color: '#333', fontSize: '0.7rem', marginTop: '10px', fontStyle: 'italic' }}>
-          The Objective Function: Structural integrity minus entropy plus expansion potential, integrated across all spacetime.
-        </p>
       </section>
 
       <footer style={{ padding: '100px 20px', textAlign: 'center', color: '#222' }}>
         <p style={{ letterSpacing: '10px', fontSize: '0.7rem' }}>86,400 SECONDS // NO TIME TO WASTE</p>
+        <p style={{ marginTop: '20px' }}>© 2025 MULTI-PLANETARY CIVILISATION RESEARCH LAB</p>
       </footer>
     </div>
   );
